@@ -2,22 +2,23 @@ export ZSH=/Users/yadullahd/.oh-my-zsh
 export NODE_PATH="/usr/local/lib/node_modules"
 export PATH=$HOME/flutter/bin:$PATH
 
-# Docker within iTerm
-eval "$(docker-machine env default)"
-
 # ===============================================
-#        ZSH & POWERLEVEL9K CONFIGURATION        
+#                      ZSH 
 # ===============================================
-ZSH_THEME="powerlevel9k/powerlevel9k"
-POWERLEVEL9K_MODE="awesome-patched"
-POWERLEVEL9K_DISABLE_RPROMPT=true
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs)
-POWERLEVEL9K_OS_ICON_BACKGROUND="white"
-POWERLEVEL9K_OS_ICON_FOREGROUND="black"
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+ZSH_THEME="muse"
 USER=``
 COMPLETION_WAITING_DOTS="true"
+
+# ===============================================
+#                 POWERLEVEL9K
+# ===============================================
+# POWERLEVEL9K_MODE="awesome-patched"
+# POWERLEVEL9K_DISABLE_RPROMPT=true
+# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
+# POWERLEVEL9K_OS_ICON_BACKGROUND="white"
+# POWERLEVEL9K_OS_ICON_FOREGROUND="black"
+# POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+# POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 
 # ===============================================
 #                     PLUGINS
