@@ -1,17 +1,17 @@
-# Environment
+## Environment
 - [POP!_OS by System76](https://system76.com/pop)
 
-# VIM
+## VIM
 - My [.vimrc](.vimrc)
 - Using [The Ultimate vimrc]
 
-# ZSH
+## ZSH
 - My [.zshrc](.zshrc)
 - Using the [muse] theme alongside with the [Nord] colorscheme installed with [Gogh]
 - Using [ZSH-Autosuggestions]
 - Using [ZSH-Syntax-Highlighting]
 
-# Visual Studio Code
+## Visual Studio Code
 
 - My [VSCode Settings](vscode.json)
 - Used extensions
