@@ -9,6 +9,7 @@
   "editor.formatOnPaste": true,
   "editor.tabSize": 2,
   "editor.cursorStyle": "line",
+  "editor.minimap.enabled": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
   "git.enableSmartCommit": true,
