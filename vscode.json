@@ -14,5 +14,5 @@
   "explorer.confirmDelete": false,
   "git.enableSmartCommit": true,
   "materialTheme.fixIconsRunning": false,
-  "workbench.colorTheme": "Dracula"
+  "gitlens.mode.active": "zen"
 }
