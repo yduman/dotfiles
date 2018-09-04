@@ -1,9 +1,8 @@
-export ZSH="/home/yduman/.oh-my-zsh"
+export ZSH="/home/prox/.oh-my-zsh"
 
 # ZSH CONFIG
-ZSH_THEME="muse"
+ZSH_THEME="spaceship"
 COMPLETION_WAITING_DOTS="true"
-USER=``
 
 # PLUGINS
 plugins=(git, yarn, zsh-autosuggestions, zsh-syntax-highlighting)
@@ -22,7 +21,12 @@ alias gl="git log"
 alias gs="git status"
 alias gp="git push"
 alias c="clear"
+alias cat="bat"
 
-# SOURCE
+# NEEDED LINES AT THE END OF THIS FILE
 source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+    source /etc/profile.d/vte.sh
+fi

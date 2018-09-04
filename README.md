@@ -7,7 +7,7 @@
 
 ## ZSH
 - My [.zshrc](.zshrc)
-- Using the [muse] theme alongside with the [Nord] colorscheme installed with [Gogh]
+- Using [Spaceship ZSH] 
 - Using [ZSH-Autosuggestions]
 - Using [ZSH-Syntax-Highlighting]
 
@@ -50,7 +50,6 @@
 
 [The Ultimate vimrc]: https://github.com/amix/vimrc
 [muse]: https://github.com/robbyrussell/oh-my-zsh/wiki/Themes#muse
-[Nord]: https://github.com/arcticicestudio/nord
-[Gogh]: https://github.com/Mayccoll/Gogh
+[Spaceship ZSH]: https://github.com/denysdovhan/spaceship-prompt 
 [ZSH-Autosuggestions]: https://github.com/zsh-users/zsh-autosuggestions
 [ZSH-Syntax-Highlighting]: https://github.com/zsh-users/zsh-syntax-highlighting
