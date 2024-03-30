@@ -1,0 +1,56 @@
+{
+  "files.eol": "\n",
+
+  // Code
+  "editor.fontFamily": "GeistMono Nerd Font",
+  "editor.fontSize": 16,
+  "editor.fontLigatures": true,
+  "editor.lineHeight": 1.7,
+
+  // Editor
+  "breadcrumbs.enabled": true,
+  "editor.copyWithSyntaxHighlighting": false,
+  "editor.smoothScrolling": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.minimap.enabled": false,
+  "editor.cursorStyle": "line",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.gotoLocation.multipleReferences": "goto",
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleDeclarations": "goto",
+  "editor.gotoLocation.multipleImplementations": "goto",
+  "editor.gotoLocation.multipleTypeDefinitions": "goto",
+  "window.zoomLevel": 0,
+  
+  // Terminal
+  "terminal.integrated.fontFamily": "GeistMono Nerd Font",
+  "terminal.integrated.fontSize": 14,
+
+  // Extensions
+  "prettier.requireConfig": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "markdown.extension.toc.updateOnSave": true,
+  "gitlens.codeLens.recentChange.enabled": false,
+  "gitlens.codeLens.authors.enabled": false,
+  "material-icon-theme.activeIconPack": "nest",
+
+  // Security
+  "security.workspace.trust.untrustedFiles": "open",
+  "security.workspace.trust.banner": "never",
+  "security.workspace.trust.emptyWindow": false,
+  "security.workspace.trust.enabled": false,
+  "security.workspace.trust.startupPrompt": "never",
+  
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "workbench.iconTheme": "material-icon-theme",
+  "git.confirmSync": false,
+  "aws.suppressPrompts": {
+    "fileViewerEdit": true
+  },
+  "workbench.productIconTheme": "fluent-icons",
+  "workbench.activityBar.location": "top",
+  "workbench.colorTheme": "Dracula",
+}
+
