@@ -1,56 +1,96 @@
 {
-  "files.eol": "\n",
+    "files.eol": "\n",
+    "files.associations": {
+      ".env*": "dotenv",
+    },
+    
+    // Code
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontSize": 16,
+    "editor.fontLigatures": true,
+    "editor.semanticHighlighting.enabled": true,
 
-  // Code
-  "editor.fontFamily": "GeistMono Nerd Font",
-  "editor.fontSize": 16,
-  "editor.fontLigatures": true,
-  "editor.lineHeight": 1.7,
-
-  // Editor
-  "breadcrumbs.enabled": true,
-  "editor.copyWithSyntaxHighlighting": false,
-  "editor.smoothScrolling": true,
-  "editor.cursorSmoothCaretAnimation": "on",
-  "editor.minimap.enabled": false,
-  "editor.cursorStyle": "line",
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.gotoLocation.multipleReferences": "goto",
-  "editor.gotoLocation.multipleDefinitions": "goto",
-  "editor.gotoLocation.multipleDeclarations": "goto",
-  "editor.gotoLocation.multipleImplementations": "goto",
-  "editor.gotoLocation.multipleTypeDefinitions": "goto",
-  "window.zoomLevel": 0,
+    // Editor
+    "breadcrumbs.enabled": true,
+    "editor.copyWithSyntaxHighlighting": false,
+    "editor.smoothScrolling": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.minimap.enabled": false,
+    "editor.cursorStyle": "line",
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // "editor.defaultFormatter": "biomejs.biome",
+    "[markdown]": {
+      "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    "[go]": {
+      "editor.insertSpaces": false,
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "golang.go",
+      "editor.codeActionsOnSave": {
+        "source.organizeImports": "always"
+      }
+    },
+    "editor.gotoLocation.multipleReferences": "goto",
+    "editor.gotoLocation.multipleDefinitions": "goto",
+    "editor.gotoLocation.multipleDeclarations": "goto",
+    "editor.gotoLocation.multipleImplementations": "goto",
+    "editor.gotoLocation.multipleTypeDefinitions": "goto",
+    "window.zoomLevel": 0,
+    
+    // Terminal
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.suggest.enabled": true,
   
-  // Terminal
-  "terminal.integrated.fontFamily": "GeistMono Nerd Font",
-  "terminal.integrated.fontSize": 14,
-
-  // Extensions
-  "prettier.requireConfig": true,
-  "vsicons.dontShowNewVersionMessage": true,
-  "markdown.extension.toc.updateOnSave": true,
-  "gitlens.codeLens.recentChange.enabled": false,
-  "gitlens.codeLens.authors.enabled": false,
-  "material-icon-theme.activeIconPack": "nest",
-
-  // Security
-  "security.workspace.trust.untrustedFiles": "open",
-  "security.workspace.trust.banner": "never",
-  "security.workspace.trust.emptyWindow": false,
-  "security.workspace.trust.enabled": false,
-  "security.workspace.trust.startupPrompt": "never",
+    // Extensions
+    "biome.requireConfiguration": true,
+    "prettier.requireConfig": true,
+    "markdown.extension.toc.updateOnSave": true,
+    "gitlens.codeLens.recentChange.enabled": false,
+    "gitlens.codeLens.authors.enabled": false,
+    "material-icon-theme.activeIconPack": "nest",
+    "jest.runMode": "on-demand",
+    "peacock.affectActivityBar": false,
+    "peacock.affectStatusBar": false,
   
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "workbench.iconTheme": "material-icon-theme",
-  "git.confirmSync": false,
-  "aws.suppressPrompts": {
-    "fileViewerEdit": true
-  },
-  "workbench.productIconTheme": "fluent-icons",
-  "workbench.activityBar.location": "top",
-  "workbench.colorTheme": "Dracula",
-}
-
+    // Security
+    "security.workspace.trust.untrustedFiles": "open",
+    "security.workspace.trust.banner": "never",
+    "security.workspace.trust.emptyWindow": false,
+    "security.workspace.trust.enabled": false,
+    "security.workspace.trust.startupPrompt": "never",
+  
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "git.confirmSync": false,
+    "aws.suppressPrompts": {
+      "fileViewerEdit": true
+    },
+    "aws.telemetry": false,
+    "workbench.iconTheme": "bearded-icons",
+    "editor.largeFileOptimizations": false,
+    "workbench.startupEditor": "none",
+    "gitlens.views.scm.grouped.views": {
+      "commits": true,
+      "branches": true,
+      "remotes": true,
+      "stashes": true,
+      "tags": true,
+      "worktrees": true,
+      "contributors": true,
+      "repositories": false,
+      "searchAndCompare": false,
+      "launchpad": true
+    },
+    "workbench.colorTheme": "Dracula Theme",
+    "window.autoDetectColorScheme": true,
+    "workbench.preferredLightColorTheme": "Default Light Modern",
+    "workbench.preferredDarkColorTheme": "Bearded Theme Arc",
+    "editor.accessibilitySupport": "off",
+    "python.defaultInterpreterPath": "/opt/homebrew/bin/python3.13",
+    "git.blame.editorDecoration.enabled": false,
+    "claudeCode.preferredLocation": "panel",
+    "chat.tools.terminal.outputLocation": "chat",
+  }
+  

@@ -27,23 +27,17 @@ GREEN="\033[38;2;80;250;123m"
 ORANGE="\033[38;2;255;184;108m"
 RESET="\033[0m"
 
-# Icons
-FOLDER_ICON="󰉋"
-BRANCH_ICON=""
-MODEL_ICON="󰧑"
-CONTEXT_ICON=""
-
-# Build status line with icons and colors
-output="${CYAN}${FOLDER_ICON} ${dir_name}${RESET}"
+# Build status line with colors
+output="${CYAN}${dir_name}${RESET}"
 
 if [ -n "$git_branch" ]; then
-  output="${output} at ${PURPLE}${BRANCH_ICON} ${git_branch}${RESET}"
+  output="${output} at ${PURPLE}${git_branch}${RESET}"
 fi
 
-output="${output} using ${GREEN}${MODEL_ICON} ${model_name}${RESET}"
+output="${output} using ${GREEN}${model_name}${RESET}"
 
 if [ -n "$remaining_pct" ]; then
-  output="${output} with ${ORANGE}${CONTEXT_ICON} ${remaining_pct}% remaining${RESET}"
+  output="${output} with ${ORANGE}${remaining_pct}%${RESET} remaining"
 fi
 
 # Output the status line

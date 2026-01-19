@@ -1,70 +1,79 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/Users/yadullah.duman/.zsh/completions:"* ]]; then export FPATH="/Users/yadullah.duman/.zsh/completions:$FPATH"; fi
+export ZSH="$HOME/.oh-my-zsh"
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+# Pointing Lazygit to desired config folder
+export XDG_CONFIG_HOME="$HOME/.config"
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
+export DOCKER_HOST=$(docker context inspect -f '{{ .Endpoints.docker.Host }}')
+export PATH="~/Library/Android/sdk/platform-tools:$PATH"
 
-export ZSH="/Users/yadullahd/.oh-my-zsh"
-export PATH=$PATH
-# export JAVA_HOME="/usr/lib/jvm/default-java"
-
-# ---------- ZSH configs ---------- #
-ZSH_THEME="powerlevel10k/powerlevel10k"
-bindkey "[D" backward-word
-bindkey "[C" forward-word
-bindkey "^[a" beginning-of-line
-bindkey "^[e" end-of-line
-
-# ---------- Plugins ---------- #
-plugins=(docker zsh-autosuggestions zsh-syntax-highlighting)
-
+# -------------------- OH-MY-ZSH -------------------- #
+zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+plugins=(git z docker asdf)
 source $ZSH/oh-my-zsh.sh
 
-# ---------- Aliases ---------- #
+# -------------------- ALIAS -------------------- #
+# Shortcuts 
+alias vim="nvim"
 alias zshconfig="vim ~/.zshrc"
-alias p10kconfig="vim ~/.p10k.zsh"
-alias sourcezsh="source ~/.zshrc"
-alias update="brew update"
-alias upgrade="brew upgrade"
-alias outdated="brew outdated"
+alias ghostconf="vim ~/.config/ghostty/config"
+alias c="clear"
+alias c.="code-insiders ."
+alias code="code-insiders"
+alias cat="bat -p"
+
+# Git
+alias gpl="git pull"
 alias ga="git add"
 alias gs="git status"
-alias gc="git commit -m"
-alias gl="git log"
+alias gc="git commit"
+alias gcm="git commit -m"
 alias gp="git push"
-alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias c="clear"
-alias code="code-insiders"
-alias c.="code ."
+alias gl="git log"
+
+# Docker
 alias dps="docker ps --format 'table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Status}}'"
 alias dpsa="docker ps -a --format 'table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Status}}'"
-alias dlogs="docker logs --follow "
-alias projects="cd ~/Projects"
-alias uni="cd ~/Uni"
-alias p10k-update="git -C $ZSH_CUSTOM/themes/powerlevel10k pull"
-alias notes="cd ~/Projects/notes"
+alias dlogs="docker logs --follow"
+alias dvls="docker volume ls"
 
-# ---------- CONFIG AT EOF ---------- #
+# Tools
+alias air="~/go/bin/air"
+alias lg="lazygit"
+alias ldo="lazydocker"
+alias ls="eza --color=always --icons=always --no-user"
+alias ll="eza --color=always --icons=always --long --no-user"
+alias l="eza --color=always --icons=always --long --all"
 
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+# -------------------- SOURCE -------------------- #
+eval "$(starship init zsh)"
+eval "$(atuin init zsh --disable-up-arrow)"
+source <(fzf --zsh)
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+. "/Users/yadullah.duman/.deno/env"
+# Initialize zsh completions (added by deno install script)
+autoload -Uz compinit
+compinit
+# pnpm
+export PNPM_HOME="/Users/yadullah.duman/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
 
-# This speeds up pasting w/ autosuggest
-# https://github.com/zsh-users/zsh-autosuggestions/issues/238
-pasteinit() {
-  OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
-  zle -N self-insert url-quote-magic
-}
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-pastefinish() {
-  zle -N self-insert $OLD_SELF_INSERT
-}
-zstyle :bracketed-paste-magic paste-init pasteinit
-zstyle :bracketed-paste-magic paste-finish pastefinish
+. "$HOME/.local/bin/env"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+# bun completions
+[ -s "/Users/yadullah.duman/.bun/_bun" ] && source "/Users/yadullah.duman/.bun/_bun"
 
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

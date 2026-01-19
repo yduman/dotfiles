@@ -1,0 +1,19 @@
+# font-family = Maple Mono NF
+font-family = JetBrainsMono Nerd Font
+font-size = 18 
+theme = Dracula
+window-padding-balance = true
+macos-titlebar-style = transparent
+macos-option-as-alt = right 
+shell-integration-features = no-cursor,no-title,sudo
+
+# background-opacity = 0.8
+# background-blur = true
+
+keybind = cmd+s>r=reload_config
+keybind = cmd+up=goto_split:top
+keybind = cmd+right=goto_split:right
+keybind = cmd+down=goto_split:bottom
+keybind = cmd+left=goto_split:left
+keybind = cmd+s>e=equalize_splits
+keybind = shift+enter=text:\x1b\r
